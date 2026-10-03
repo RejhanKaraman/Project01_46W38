@@ -42,6 +42,8 @@ float
 
 if __name__ == "__main__":
     wind_speed = 8.0
-    power = calculate_power(wind_speed)
+    linear_power = calculate_power(wind_speed, interpolation="linear")
+    cubic_power = calculate_power(wind_speed, interpolation="cubic")
     print(f"Wind speed: {wind_speed} m/s")
-    print(f"Power output: {power:.2f} MW")
+    print(f"Linear power output: {linear_power:.2f} MW")
+    print(f"Cubic power output: {cubic_power:.2f} MW")
